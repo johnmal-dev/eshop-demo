@@ -1,0 +1,18 @@
+@use 'typography' as *;
+
+footer {
+  background-color: $primary;
+  color: white;
+  a {
+    color: $white;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    .footer-nav {
+      display: flex;
+      gap: 25px;
+    }
+  }
+}
