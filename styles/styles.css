@@ -363,36 +363,178 @@ a {
   margin: 0 auto;
 }
 
-.navbar .container {
+.navBar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(8, 75, 109, 0.08);
+  background-color: #fff;
+}
+.navBar .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 20px 0;
 }
-
-.categories .category-gallery {
+.navBar .searchCart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.navBar .searchCart .searchIcon,
+.navBar .searchCart .bag {
+  margin-right: 15px;
+}
+.navBar a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navBar .logo {
+  margin-left: 60px;
+}
+.navBar .counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navBar .counter p {
+  width: 24px;
+  height: 24px;
+  background-color: #084b6d;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.slideOutNav {
+  padding: 35px 50px;
+  border-right: 1px solid #f4fcff;
+  width: 100%;
+  max-width: 506px;
+  height: 100vh;
+  background-color: #084b6d;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -506px;
+  z-index: 20;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+}
+.slideOutNav .buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.slideOutNav .buttonContainer button {
+  padding: 10px 0 10px 20px;
+}
+.slideOutNav .mainMenu a {
+  font-family: "Young Serif";
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: white;
+}
+.slideOutNav .mainMenu a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.slideOutNav .mainMenu a:focus {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.categoryGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 100%;
 }
-.categories .category-gallery .item {
-  padding: 25px;
+.categoryGallery .items {
   -ms-flex-preferred-size: 40%;
       flex-basis: 40%;
+  padding: 45px;
   margin: 50px 25px 25px;
-  background-color: blue;
   border-radius: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.categoryGallery .items img {
+  max-width: 100%;
+  border-radius: 10%;
+  margin-bottom: 20px;
+}
+.categoryGallery .items:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.categoryGallery .items:focus {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.categoryGallery .itemOne {
+  background-color: #ffd698;
+}
+.categoryGallery .itemTwo {
+  background-color: #f4fcff;
+}
+.categoryGallery .itemThree {
+  background-color: #f8fbf3;
+}
+.categoryGallery .itemFour {
+  background-color: #fff5f5;
+}
+
+.play {
+  background-image: url(../assets/background-image.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0;
+}
+.play .playContainer {
+  max-width: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,41 +545,32 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-}
-.categories .category-gallery .item img {
-  max-width: 100%;
-  border-radius: 10%;
-  margin-bottom: 20px;
-}
-.categories .category-gallery .item:hover, .categories .category-gallery .item:focus {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-}
-.categories .category-gallery .item-1 {
-  background-color: #ffd698;
-}
-.categories .category-gallery .item-2 {
-  background-color: #f4fcff;
-}
-.categories .category-gallery .item-3 {
-  background-color: #f8fbf3;
-}
-.categories .category-gallery .item-4 {
-  background-color: #fff5f5;
+  padding: 70px 45px;
+  border: 24px solid #f4fcff;
+  background-color: #fff;
 }
 
 footer {
   background-color: #084b6d;
-  color: white;
+  color: #fff;
+  padding: 90px 0 50px 0;
 }
-footer a {
+footer .footerFlexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 90px;
+}
+footer .footerFlexContainer h4 {
   color: #fff;
 }
-footer .container {
+footer .footerNav {
+  width: 40%;
+}
+footer .footerNav nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -445,11 +578,19 @@ footer .container {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-footer .container .footer-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 25px;
+footer .footerNav nav ul {
+  width: 33%;
+}
+footer .footerNav nav a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+footer .footerNav nav a:hover {
+  color: white;
+}
+footer .footerNav nav a:focus {
+  color: white;
 }
 
 @media (max-width: 1000px) {
@@ -460,4 +601,115 @@ footer .container .footer-nav {
 }
 @media (max-width: 500px) {
   /* all of our styles for MOBILE devices will go within this breakpoint */
+}
+header {
+  background-color: #f8fbf3;
+  margin-bottom: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+header .headerImgContainer {
+  width: 45%;
+}
+header .headerImgContainer img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+header .headerContent {
+  width: 55%;
+  color: #084b6d;
+}
+header .headerContent .contentContainer {
+  margin: 0 auto;
+  width: 65%;
+}
+
+/* Once again, we need to import our variables partial in this file, and prefix variables with 'variables.: */
+.wrapper {
+  max-width: 1260px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+button {
+  color: #084b6d;
+  background-color: transparent;
+  padding: 18px 36px;
+  border: 2px solid #084b6d;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  /* style the button in the main nav menu to look just like an icon */
+}
+button:hover {
+  background-color: #084b6d;
+  color: #fff;
+}
+button:focus {
+  background-color: #084b6d;
+  color: #fff;
+}
+button.secondary {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+  padding: 8px 12px;
+}
+button.secondary:hover {
+  background-color: #fff;
+  color: #084b6d;
+}
+button.secondary:focus {
+  background-color: #fff;
+  color: #084b6d;
+}
+button.solid {
+  color: #fff;
+  background-color: #084b6d;
+}
+button.solid:hover {
+  color: #084b6d;
+  background-color: #fff;
+}
+button.menuIcon {
+  display: inherit;
+  padding: 0;
+  border: none;
+}
+button.menuIcon:hover {
+  background-color: transparent;
+}
+button.menuIcon:focus {
+  background-color: transparent;
+}
+
+a.button {
+  color: #084b6d;
+  background-color: transparent;
+  padding: 18px 36px;
+  border: 2px solid #084b6d;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1.2rem;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+a.button:hover {
+  background-color: #084b6d;
+  color: #fff;
+}
+a.button:focus {
+  background-color: #084b6d;
+  color: #fff;
 }
